@@ -33,7 +33,19 @@ const App = () => {
         </p>
         <p>Number of exercises: {exercises1 + exercises2 + exercises3}</p>
       </div>
+      <h5>
+        <Footer/>
+      </h5>
     </>
+  )
+}
+
+
+const Footer = () => {
+  return (
+    <div>
+      greeting app created by <a href='https://github.com/Amisha-100'>amisha</a>
+    </div>
   )
 }
 
