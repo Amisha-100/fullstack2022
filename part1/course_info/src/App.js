@@ -1,7 +1,29 @@
-const User = (user) => {
+const Header = (user) => {
   return (
     <div>
-      {user.name} is learning React!
+      {user.course} is learning React!
+      <hr/>
+    </div>
+  )
+}
+
+const Content = (props) => {
+  return(
+    <div>
+      {props.parts[0].name} -- {props.parts[0].exercises}
+      <br/>
+      {props.parts[1].name} -- {props.parts[1].exercises}
+      <br/>
+      {props.parts[2].name} -- {props.parts[2].exercises}
+      <br/>
+    </div>
+  )
+}
+
+const Total = (props) => {
+  return(
+    <div>
+      Total: {props.parts[0].exercises + props.parts[1].exercises + props.parts[2].exercises}
     </div>
   )
 }
@@ -28,7 +50,8 @@ const App = () => {
   return (
     <div>
       <Header course={course.name} />
-      <Content parts={course.parts.parts} />
+      <Content parts={course.parts} />
+      <Total parts={course.parts} />
       <Footer />
     </div>
   )
@@ -37,9 +60,9 @@ const App = () => {
 
 const Footer = () => {
   return (
-    <div>
+    <h5>
       greeting app created by <a href='https://github.com/Amisha-100'>amisha</a>
-    </div>
+    </h5>
   )
 }
 
