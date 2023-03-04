@@ -28,6 +28,14 @@ const Total = (props) => {
   )
 }
 
+const Footer = () => {
+  return (
+    <h5>
+      greeting app created by <a href='https://github.com/Amisha-100'>amisha</a>
+    </h5>
+  )
+}
+
 const App = () => {
   const course = {
     name: 'Half Stack application development',
@@ -54,15 +62,6 @@ const App = () => {
       <Total parts={course.parts} />
       <Footer />
     </div>
-  )
-}
-
-
-const Footer = () => {
-  return (
-    <h5>
-      greeting app created by <a href='https://github.com/Amisha-100'>amisha</a>
-    </h5>
   )
 }
 
